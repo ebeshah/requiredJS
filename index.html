@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+	  <link data-require="bootstrap@*" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
+        <meta charset="utf-8" />
+        <title>My test page</title>
+    </head>
+    <body ng-controller="mainController">
+	<ul class="nav nav-tabs">
+		<li class="active"><a ng-click="setRoute('home')">Home</a>
+		</li>
+		<li><a ng-click="setRoute('user')">Users</a>
+		</li>
+		<li><a ng-click="setRoute('about')">About</a>
+		</li>
+	</ul>
+	<div ng-view=""></div>
+	<h1>{{title}}</h1><p>{{5*6}}</p>
+     <script src="vendor/requirejs/require.js" data-main="app/main.js"></script>        
+    </body>
+</html>
